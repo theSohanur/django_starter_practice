@@ -33,5 +33,5 @@ def create_item(request):
     form = ItemForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('index') ## removed 'food', becoz there is no namespace used in app level 
+        return redirect('index')
     return render(request, 'food/item_form.html', {'form': form})
