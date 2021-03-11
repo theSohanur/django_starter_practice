@@ -10,4 +10,6 @@ urlpatterns = [
     path('item/', views.item, name='index'),
     # add item
     path('add/', views.create_item, name='create_item'),
+    # Edit item
+    path('update/<int:item_id>/', views.update_item, name='update_item'),
 ]
